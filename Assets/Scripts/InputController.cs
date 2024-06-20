@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
+    public Jumper controlledJumper;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,7 @@ public class InputController : MonoBehaviour
     {
         if ( Input.GetMouseButtonDown(0) )
         {
-            
+            controlledJumper.Jump();
         }
     }
 }
