@@ -8,9 +8,11 @@ public class PipeController : MonoBehaviour
     public float leftXBound = -10;
     // When this pipe respawns, it will appear at this right bound
     public float rightXBound = 20;
+
+    public int variationY = 1;
     // The pipe moves this many units per second
     public float speed = -2;
-    
+
     // Update is called once every frame
     public void Update()
     {
@@ -23,6 +25,7 @@ public class PipeController : MonoBehaviour
         {
             Vector3 newPosition = transform.position;
             newPosition.x = rightXBound;
+            newPosition.y = UnityEngine.Random.Range(-variationY, variationY);
             transform.position = newPosition;
         }
     }
