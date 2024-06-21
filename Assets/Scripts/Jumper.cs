@@ -11,18 +11,6 @@ public class Jumper : MonoBehaviour
     public Rigidbody2D body;
     public float jumpAmount = 5;
 
-    // Update is called once per frame
-    /*
-    void Update()
-    {
-        // if we pressed space this frame OR if we left-clicked this frame...
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            // ... then set the velocity of our Rigidbody2D to up, with a magnitude of jumpAmount
-            body.velocity = new Vector2(0, jumpAmount);
-        }
-    }
-    */
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
